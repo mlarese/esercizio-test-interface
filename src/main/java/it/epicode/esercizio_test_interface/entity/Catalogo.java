@@ -19,7 +19,7 @@ public class Catalogo {
     private  Long id;
 
     // voci_di_catalogo: list
-    @ManyToMany
-    private List<VoceCatalogo> voci_di_catalogo;
+    //@ManyToMany
+    //private List<VoceCatalogo> voci_di_catalogo;
 
 }

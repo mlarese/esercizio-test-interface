@@ -10,16 +10,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "consoles")
-public class Console {
+public class Console implements VoceCatalogo{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     // descrizione: string marca: string modello: string
     @Column(length = 100)
-    private String descrizione;
+    private String nome;
     @Column(length = 100)
     private String marca;
     @Column(length = 100)
     private String modello;
 
+    @Override
+    public String descrizione() {
+        return  nome + ", " + marca + " " + modello;
+    }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Entity
-public class Videogioco {
+public class Videogioco  implements VoceCatalogo{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -18,4 +18,8 @@ public class Videogioco {
     @ManyToMany
     private List<Categoria> categoria;
 
+    @Override
+    public String descrizione() {
+        return titolo + ", " + prezzo + "€";
+    }
 }
