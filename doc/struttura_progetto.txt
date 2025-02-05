@@ -1,0 +1,9 @@
+Negozio di video giochi
+
+
+[x]interfaccia vocedicatalogo descrizione() // stampa l'articolo in vendita
+entità categoria id: long descrizione: string
+entità videogioco id: long titolo: string prezzo: double: categoria: list categoria
+entità console id: long descrizione: string marca: string modello: string
+entità negozio  id: long nome: string  indirizzo: string  telefono: string email: string: videogiochi: list console: list
+entità catalogo id: long   voci_di_catalogo: list
